@@ -14,7 +14,7 @@ script: |
   sudo apt-get install git
   mkdir modules
 
-  sudo puppet module install ntp
+  sudo puppet module list
 
   git clone "https://github.com/nixon/puppet-memcached.git" modules/memcached
   sudo puppet apply --modulepath=$WERCKER_SOURCE_DIR/modules $WERCKER_SOURCE_DIR/manifests/init.pp
